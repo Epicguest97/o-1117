@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProductCard from "../components/ProductCard";
-import { Beaker, FlaskConical, Droplet, Microscope } from "lucide-react";
+import { Beaker, FlaskConical, Droplet } from "lucide-react";
 
 // Mock data for lab equipment
 const labEquipment = {
@@ -13,32 +13,24 @@ const labEquipment = {
       id: 101,
       name: "Universal Testing Machine",
       price: "Structural Lab",
-      rating: 4.5,
-      reviews: 15,
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
     },
     {
       id: 102,
       name: "Compression Testing Machine",
       price: "Structural Lab",
-      rating: 4.2,
-      reviews: 8,
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
     },
     {
       id: 103,
       name: "Flexural Testing Machine",
       price: "Structural Lab",
-      rating: 4.0,
-      reviews: 6,
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
     },
     {
       id: 104,
       name: "Impact Testing Machine",
       price: "Structural Lab",
-      rating: 4.3,
-      reviews: 9,
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
     }
   ],
@@ -47,32 +39,24 @@ const labEquipment = {
       id: 201,
       name: "Direct Shear Apparatus",
       price: "Geotechnical Lab",
-      rating: 4.4,
-      reviews: 12,
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
     },
     {
       id: 202,
       name: "Triaxial Testing System",
       price: "Geotechnical Lab",
-      rating: 4.7,
-      reviews: 14,
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
     },
     {
       id: 203,
       name: "Soil Compaction Tester",
       price: "Geotechnical Lab",
-      rating: 4.1,
-      reviews: 7,
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
     },
     {
       id: 204,
       name: "Permeability Testing Apparatus",
       price: "Geotechnical Lab",
-      rating: 4.3,
-      reviews: 8,
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
     }
   ],
@@ -81,32 +65,24 @@ const labEquipment = {
       id: 301,
       name: "Hydraulic Flume",
       price: "Hydraulics Lab",
-      rating: 4.6,
-      reviews: 11,
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
     },
     {
       id: 302,
       name: "Reynolds Apparatus",
       price: "Hydraulics Lab",
-      rating: 4.2,
-      reviews: 9,
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
     },
     {
       id: 303,
       name: "Flow Measurement Apparatus",
       price: "Hydraulics Lab",
-      rating: 4.4,
-      reviews: 13,
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
     },
     {
       id: 304,
       name: "Venturi & Orifice Meter",
       price: "Hydraulics Lab",
-      rating: 4.0,
-      reviews: 7,
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
     }
   ]
@@ -172,8 +148,7 @@ const LabPage = () => {
               name={equipment.name}
               price={equipment.price}
               image={equipment.image}
-              rating={equipment.rating}
-              reviews={equipment.reviews}
+              equipmentCount={labData.length}
             />
           ))}
         </div>

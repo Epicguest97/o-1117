@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+
 import { useNavigate } from "react-router-dom";
 
 interface ProductCardProps {
@@ -6,11 +6,12 @@ interface ProductCardProps {
   name: string;
   price: string;
   image: string;
-  rating: number;
-  reviews: number;
+  equipmentCount?: number;
+  rating?: number;
+  reviews?: number;
 }
 
-const ProductCard = ({ id = 1, name, price, image, rating, reviews }: ProductCardProps) => {
+const ProductCard = ({ id = 1, name, price, image, equipmentCount }: ProductCardProps) => {
   const navigate = useNavigate();
 
   return (
@@ -28,17 +29,11 @@ const ProductCard = ({ id = 1, name, price, image, rating, reviews }: ProductCar
       <div className="p-4">
         <h3 className="text-lg font-medium text-primary">{name}</h3>
         <p className="text-accent mt-1">{price}</p>
-        <div className="flex items-center gap-1 mt-2">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Star
-              key={i}
-              className={`w-4 h-4 ${
-                i < rating ? "fill-[#ffd700] text-[#ffd700]" : "text-gray-300"
-              }`}
-            />
-          ))}
-          <span className="text-sm text-accent ml-2">({reviews})</span>
-        </div>
+        {equipmentCount !== undefined && (
+          <p className="text-sm text-accent mt-2">
+            Part of {equipmentCount} equipment collection
+          </p>
+        )}
       </div>
     </div>
   );
