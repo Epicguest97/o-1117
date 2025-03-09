@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProductCard from "../components/ProductCard";
-import { Beaker, Flask, FlaskConical, Microscope } from "lucide-react";
+import { Beaker, FlaskConical, Droplet, Microscope } from "lucide-react";
 
 // Mock data for lab equipment
 const labEquipment = {
@@ -126,7 +126,7 @@ const labInfo = {
   },
   "hydraulics": {
     title: "Hydraulics Lab",
-    icon: Flask,
+    icon: Droplet,
     description: "The Hydraulics Lab features equipment for studying fluid behavior, flow characteristics, and hydraulic systems for water resource engineering applications."
   }
 };
