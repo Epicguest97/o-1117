@@ -9,9 +9,9 @@ const Navbar = () => {
         <Link to="/" className="text-2xl font-bold text-primary">CIVIL LAB EQUIPMENT</Link>
         
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/marketplace" className="nav-link">Structural Lab</Link>
-          <Link to="/marketplace" className="nav-link">Geotechnical Lab</Link>
-          <Link to="/marketplace" className="nav-link">Hydraulics Lab</Link>
+          <Link to="/lab/structural" className="nav-link">Structural Lab</Link>
+          <Link to="/lab/geotechnical" className="nav-link">Geotechnical Lab</Link>
+          <Link to="/lab/hydraulics" className="nav-link">Hydraulics Lab</Link>
         </div>
 
         <div className="flex items-center space-x-6">
