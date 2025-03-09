@@ -49,34 +49,38 @@ const Index = () => {
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 px-4">Our Laboratories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-            <ProductCard
-              name="Structural Lab"
-              price="Building Testing Equipment"
-              image="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
-              rating={5}
-              reviews={12}
-            />
-            <ProductCard
-              name="Geotechnical Lab"
-              price="Soil Testing Equipment"
-              image="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9"
-              rating={4}
-              reviews={8}
-            />
-            <ProductCard
-              name="Hydraulics Lab"
-              price="Fluid Mechanics Equipment"
-              image="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
-              rating={5}
-              reviews={15}
-            />
-            <ProductCard
-              name="Materials Lab"
-              price="Material Testing Equipment"
-              image="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-              rating={4}
-              reviews={10}
-            />
+            <div onClick={() => navigate('/lab/structural')} className="cursor-pointer">
+              <ProductCard
+                name="Structural Lab"
+                price="Building Testing Equipment"
+                image="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
+                equipmentCount={4}
+              />
+            </div>
+            <div onClick={() => navigate('/lab/geotechnical')} className="cursor-pointer">
+              <ProductCard
+                name="Geotechnical Lab"
+                price="Soil Testing Equipment"
+                image="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9"
+                equipmentCount={4}
+              />
+            </div>
+            <div onClick={() => navigate('/lab/hydraulics')} className="cursor-pointer">
+              <ProductCard
+                name="Hydraulics Lab"
+                price="Fluid Mechanics Equipment"
+                image="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+                equipmentCount={4}
+              />
+            </div>
+            <div onClick={() => navigate('/marketplace')} className="cursor-pointer">
+              <ProductCard
+                name="Materials Lab"
+                price="Material Testing Equipment"
+                image="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                equipmentCount={4}
+              />
+            </div>
           </div>
         </div>
       </section>
